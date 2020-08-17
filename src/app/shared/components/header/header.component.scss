@@ -1,0 +1,13 @@
+ul li {
+  list-style: none;
+}
+.profile-card {
+  text-align: center;
+  padding: 0 5px 5px 5px;
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}

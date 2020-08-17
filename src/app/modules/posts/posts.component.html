@@ -1,0 +1,46 @@
+
+<div class="container custom-container-2">
+  <!-- Show users-->
+  <div class="no-data text-center" *ngIf="users$.length==0">
+    <p>There is not applicant here</p>
+    <button class="btn btn-outline-primary">Add User</button>
+  </div>
+
+  <!-- list table-->
+  <div >
+    <h4 class="mb-3 text-center">Users</h4>
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Phone No</th>
+            <th scope="col">Email</th>
+            <th scope="col">Education</th>
+            <th scope="col">Origin</th>
+            <th scope="col">Training</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users$">
+            <td>{{user._id}}</td>
+            <td>{{user.fName}}</td>
+            <td>{{user.sName}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.education}}</td>
+            <td>{{user.origin}}</td>
+            <td>{{user.training}}</td>
+            <td>
+              <span class="edit">Edit</span>
+              <span class="delete">Delete</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

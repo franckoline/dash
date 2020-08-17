@@ -1,0 +1,46 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click) = "togglesideBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span>MICHub</span>
+
+    <div
+    fxFlex
+    fxLayout="row"
+    fxLayoutAlign="flex-end">
+      <ul
+      fxLayout="row"
+      fxLayoutGap="20px">
+        <li>
+          <button mat-icon-button>
+            <mat-icon>notifications</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-icon-button>
+            <mat-icon>dialpad</mat-icon>
+          </button>
+        </li>
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>person_outline</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <div class="profile-card">
+              <img src="" alt="MICHub">
+              <div class="header">
+                <p>Paul Ade</p>
+                <p>o.adeniyi@mentorsint.com</p>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+            <button mat-menu-item>
+              <mat-icon>settings</mat-icon>
+              Update Profile
+            </button>
+          </mat-menu>
+      </ul>
+    </div>
+    </mat-toolbar-row>
+</mat-toolbar>
